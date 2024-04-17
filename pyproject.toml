@@ -45,6 +45,8 @@ dependencies = [
     # Scorer dependencies
     "jiwer==3.0.3",
     "rouge-score==0.1.2",
+    # webex dependecies
+    "webex@git+ssh://git@github.com/MaxDall/webex.git"
 ]
 
 [project.urls]

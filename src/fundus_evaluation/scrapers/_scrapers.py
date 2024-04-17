@@ -31,14 +31,6 @@ def normalize(scraper: Scraper) -> Scraper:
 
 
 @normalize
-def scrape_boilernet(*, html: str, **_: Any) -> List[str]:
-    from fundus_evaluation.scrapers import boilernet
-
-    body: str = boilernet.extract(html)
-    return body.split("\n")
-
-
-@normalize
 def scrape_boilerpipe(*, html: str, **_: Any) -> List[str]:
     import boilerpipe.extract as boilerpipe
 
@@ -102,3 +94,7 @@ def scrape_bte(*, html: str, **_: Any) -> List[str]:
 
     body: str = bte.html2text(html)
     return body.split("\n")
+
+@normalize
+def scrape_webex(*, html: str, **_: Any) -> List[str]:
+    pass
